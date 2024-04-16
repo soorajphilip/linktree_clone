@@ -34,3 +34,5 @@ end
 
 gem "tailwindcss-rails", "~> 2.4"
 gem "devise"
+gem "pry"
+gem 'font-awesome-sass'
