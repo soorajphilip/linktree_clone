@@ -3,7 +3,15 @@
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+        <% if user_signed_in? %>
+          <%= link_to tree_index_path do %>
+            <%= image_tag "app_logo.png", alt: "logo", class: "h-8 w-auto" %>
+          <% end %>
+        <% else %>
+          <%= link_to root_path do %>
+            <%= image_tag "app_logo.png", alt: "logo", class: "h-8 w-auto" %>
+          <% end %>
+        <% end %>
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -22,7 +30,7 @@
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <% if user_signed_in? %>
-        <%= link_to '#', class: "text-sm font-semibold leading-6 text-gray-900 mr-4" do %>
+        <%= link_to user_path(@user), class: "text-sm font-semibold leading-6 text-gray-900 mr-4" do %>
           My Account
         <% end %>
         <%= link_to destroy_user_session_path, data: {"turbo-method": :delete, "turbo-confirm": "Are you sure you want to sign out?"}, class: "text-sm font-semibold leading-6 text-gray-900" do %>
