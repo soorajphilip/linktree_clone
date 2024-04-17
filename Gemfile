@@ -11,11 +11,11 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
+gem "image_processing"
 
 # gem "redis", ">= 4.0.1"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
-# # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
@@ -36,3 +36,4 @@ gem "tailwindcss-rails", "~> 2.4"
 gem "devise"
 gem "pry"
 gem 'font-awesome-sass'
+gem 'carrierwave'

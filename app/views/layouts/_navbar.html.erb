@@ -30,6 +30,9 @@
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <% if user_signed_in? %>
+        <% if @user.image.attached? %>
+          <%= image_tag(@user.image, class: "h-8 w-8 rounded-full mr-4", alt: "Profile Picture") %>
+        <% end %>
         <%= link_to user_path(@user), class: "text-sm font-semibold leading-6 text-gray-900 mr-4" do %>
           My Account
         <% end %>
