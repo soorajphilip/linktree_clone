@@ -1,6 +1,6 @@
 class TreeController < ApplicationController
 
   def index
-    @links = Link.all
+    @links = @user.links
   end
 end
