@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resources :links
   resources :users
   resources :payments
+  get '/about', to: 'public#about', as: 'about'
+  get '/pricing', to: 'public#pricing', as: 'pricing'
+  get '/features', to: 'public#features', as: 'features'
+  get '/product', to: 'public#product', as: 'product'
 end
