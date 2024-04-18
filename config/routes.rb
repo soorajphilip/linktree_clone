@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :tree, only: :index
   resources :links
   resources :users
+  resources :payments
 end
