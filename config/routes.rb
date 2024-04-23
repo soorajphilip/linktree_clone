@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get '/pricing', to: 'public#pricing', as: 'pricing'
   get '/features', to: 'public#features', as: 'features'
   get '/product', to: 'public#product', as: 'product'
+  get 'verifications', to: 'verifications#index'
+  post 'verifications/verify', to: 'verifications#verify'
 end
